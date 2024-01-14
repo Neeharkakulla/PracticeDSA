@@ -1,5 +1,4 @@
-package src.main;
-
+ package src.main;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
