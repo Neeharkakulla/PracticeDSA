@@ -13,8 +13,9 @@ class Solution_6 {
 			return s;
 		String res = s.substring(0, 1);
 		for (int i = 0; i < len; i++) {
-			String subStr = s.substring(i, len);
-			if (subStr.length() > res.length()) {
+
+			if (len - i > res.length()) {
+				String subStr = s.substring(i, len);
 				for (int k = 0; k < subStr.length(); k++) {
 
 					String sub1 = subStr.substring(0, subStr.length() - k);
