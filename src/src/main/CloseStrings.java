@@ -1,4 +1,4 @@
-package practice.dsa;
+package src.main;
 
 import java.util.Arrays;
 

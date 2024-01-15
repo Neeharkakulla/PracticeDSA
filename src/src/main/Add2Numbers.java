@@ -1,4 +1,4 @@
-package practice.dsa;
+package src.main;
 
 class ListNode {
 	int val;

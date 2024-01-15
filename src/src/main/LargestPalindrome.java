@@ -1,4 +1,4 @@
-package practice.dsa;
+package src.main;
 
 public class LargestPalindrome {
 	public static void main(String[] args) {
