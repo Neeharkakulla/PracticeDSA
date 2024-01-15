@@ -1,4 +1,4 @@
-package practice.dsa.tree;
+package src.main.practice.dsa.tree;
 
 public class BinarySearchTree {
 

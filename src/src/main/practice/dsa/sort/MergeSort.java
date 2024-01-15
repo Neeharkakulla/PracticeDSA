@@ -1,4 +1,4 @@
-package practice.dsa.sort;
+package src.main.practice.dsa.sort;
 
 import java.util.Arrays;
 

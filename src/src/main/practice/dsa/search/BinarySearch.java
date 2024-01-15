@@ -1,4 +1,4 @@
-package practice.dsa.search;
+package src.main.practice.dsa.search;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package practice.dsa.graph;
+package src.main.practice.dsa.graph;
 
 import java.util.*;
 
