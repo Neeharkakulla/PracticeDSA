@@ -1,5 +1,5 @@
 
-package src.main;
+package src.main.practice.others;
 import java.util.Scanner;
 import java.util.Stack;
 

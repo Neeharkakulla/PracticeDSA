@@ -1,4 +1,4 @@
-package src.main;
+package src.main.practice.others;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

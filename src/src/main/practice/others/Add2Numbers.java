@@ -1,4 +1,4 @@
-package src.main;
+package src.main.practice.others;
 
 class ListNode {
 	int val;

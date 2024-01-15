@@ -1,4 +1,4 @@
-package src.main;
+package src.main.practice.others;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package src.main;
+package src.main.practice.others;
 
 public class ReverseInteger {
 	public static void main(String[] args) {

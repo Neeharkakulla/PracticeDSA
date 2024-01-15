@@ -1,5 +1,5 @@
 
-package src.main;import java.util.Currency;
+package src.main.practice.others;import java.util.Currency;
 import java.util.Locale;
 
 public class CurrencyTester {

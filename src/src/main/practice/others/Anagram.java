@@ -1,4 +1,4 @@
- package src.main;
+ package src.main.practice.others;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
