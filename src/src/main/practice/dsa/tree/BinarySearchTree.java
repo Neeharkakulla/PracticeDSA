@@ -2,9 +2,9 @@ package src.main.practice.dsa.tree;
 
 public class BinarySearchTree {
 
-	static TreeNode root = null;
+	public TreeNode root = null;
 
-	private static void postOrderTravesal(TreeNode node) {
+	private void postOrderTravesal(TreeNode node) {
 		if (node != null) {
 
 			postOrderTravesal(node.left);
@@ -14,7 +14,7 @@ public class BinarySearchTree {
 
 	}
 
-	private static void preOrderTravesal(TreeNode node) {
+	private void preOrderTravesal(TreeNode node) {
 		if (node != null) {
 			System.out.print(node.data + " ");
 			preOrderTravesal(node.left);
@@ -23,7 +23,7 @@ public class BinarySearchTree {
 		}
 	}
 
-	private static void inOrderTravesal(TreeNode node) {
+	private void inOrderTravesal(TreeNode node) {
 		if (node != null) {
 			inOrderTravesal(node.left);
 			System.out.print(node.data + " ");
@@ -32,11 +32,11 @@ public class BinarySearchTree {
 
 	}
 
-	public static void addNode(int data) {
+	public void addNode(int data) {
 		root = insertNode(root, data);
 	}
 
-	private static TreeNode insertNode(TreeNode root, int data) {
+	private TreeNode insertNode(TreeNode root, int data) {
 		if (root == null) {
 			root = new TreeNode(data);
 			return root;
@@ -50,7 +50,7 @@ public class BinarySearchTree {
 		return root;
 	}
 
-	public static void printAllTravesals() {
+	public void printAllTravesals() {
 		System.out.println("In-order Traversal ");
 		inOrderTravesal(root);
 

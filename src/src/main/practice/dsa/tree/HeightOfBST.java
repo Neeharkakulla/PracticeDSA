@@ -28,15 +28,14 @@ import java.util.LinkedList;
 public class HeightOfBST {
 
 	public static void main(String[] args) {
-		LinkedList<Integer> order = new LinkedList<>();
+		BinarySearchTree bst = new BinarySearchTree();
 		for (int i = 0; i < 10; i++) {
-			order.add((int) (Math.random() * 100 - 30) + 30);
-			BinarySearchTree.addNode(order.get(i));
+			bst.addNode((int) (Math.random() * 100 - 30) + 30);
 		}
-		System.out.println(order);
-		BinarySearchTree.printAllTravesals();
 
-		System.out.println("\n Height of BST :: " + findDepth(BinarySearchTree.root));
+		bst.printAllTravesals();
+
+		System.out.println("\n Height of BST :: " + findDepth(bst.root));
 	}
 
 	private static int findDepth(TreeNode root) {
