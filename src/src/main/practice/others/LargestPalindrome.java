@@ -8,33 +8,33 @@ public class LargestPalindrome {
 
 class Solution_6 {
 	public static String longestPalindrome(String s) {
+		if (s == null || s.length() < 1)
+			return "";
 		int len = s.length();
 		if (len <= 1)
 			return s;
-		String res = s.substring(0, 1);
+		int start = 0, end = 0;
 		for (int i = 0; i < len; i++) {
 
-			if (len - i > res.length()) {
-				String subStr = s.substring(i, len);
-				for (int k = 0; k < subStr.length(); k++) {
+			int len1 = expandArondCenter(s, i, i);
+			int len2 = expandArondCenter(s, i, i + 1);
 
-					String sub1 = subStr.substring(0, subStr.length() - k);
-
-					boolean isPalindrome = false;
-					if (subStr.length() > res.length()) {
-						for (int j = 0; j < (sub1.length() / 2); j++) {
-							if (sub1.charAt(j) != sub1.charAt(sub1.length() - j - 1)) {
-								isPalindrome = false;
-								break;
-							}
-							isPalindrome = true;
-						}
-					}
-					if (isPalindrome)
-						res = sub1.length() > res.length() ? sub1 : res;
-				}
+			int maxLen = Math.max(len1, len2);
+			if (maxLen > end - start) {
+				start = i - (maxLen - 1) / 2;
+				end = i + maxLen / 2;
 			}
+
 		}
-		return res;
+		return s.substring(start, end + 1);
+	}
+
+	private static int expandArondCenter(String s, int i, int j) {
+
+		while (i >= 0 && j < s.length() && s.charAt(i) == s.charAt(j)) {
+			i--;
+			j++;
+		}
+		return j - i - 1;
 	}
 }

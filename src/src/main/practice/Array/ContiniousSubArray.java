@@ -1,6 +1,5 @@
 package src.main.practice.Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ContiniousSubArray {
