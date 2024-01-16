@@ -41,7 +41,7 @@ public class IdentialTree {
 	private static boolean findIdentical(TreeNode node1, TreeNode node2) {
 		if (node1 == null && node2 == null)
 			return true;
-		if ((node1 == null && node2 != null) || (node1 != null && node2 == null) || node1.data != node2.data) {
+		if ((node1 == null || node2 == null) || node1.data != node2.data) {
 			return false;
 		} else {
 			boolean leftNodes = findIdentical(node1.left, node2.left);
