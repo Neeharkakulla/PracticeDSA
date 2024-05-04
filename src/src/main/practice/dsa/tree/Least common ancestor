@@ -12,8 +12,8 @@ class Node {
 public class BinaryTree {
     Node root;
 
-    // Method to find the closest common ancestor of two nodes
-    Node closestCommonAncestor(Node node, int value1, int value2) {
+    // Method to find the least common ancestor of two nodes
+    Node leastCommonAncestor(Node node, int value1, int value2) {
         if (node == null) {
             return null;
         }
@@ -24,10 +24,10 @@ public class BinaryTree {
         }
 
         // Recursively search for the values in the left and right subtrees
-        Node leftAncestor = closestCommonAncestor(node.left, value1, value2);
-        Node rightAncestor = closestCommonAncestor(node.right, value1, value2);
+        Node leftAncestor = leastCommonAncestor(node.left, value1, value2);
+        Node rightAncestor = leastCommonAncestor(node.right, value1, value2);
 
-        // If both values are found in the left and right subtrees, then the current node is the closest common ancestor
+        // If both values are found in the left and right subtrees, then the current node is the least common ancestor
         if (leftAncestor != null && rightAncestor != null) {
             return node;
         }
@@ -48,9 +48,9 @@ public class BinaryTree {
 
         int value1 = 4;
         int value2 = 5;
-        Node ancestor = tree.closestCommonAncestor(tree.root, value1, value2);
+        Node ancestor = tree.leastCommonAncestor(tree.root, value1, value2);
         if (ancestor != null) {
-            System.out.println("Closest common ancestor of nodes with values " + value1 + " and " + value2 + " is: " + ancestor.data);
+            System.out.println("Least common ancestor of nodes with values " + value1 + " and " + value2 + " is: " + ancestor.data);
         } else {
             System.out.println("Nodes with values " + value1 + " and " + value2 + " not found in the tree.");
         }
