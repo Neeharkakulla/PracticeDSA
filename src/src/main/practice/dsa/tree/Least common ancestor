@@ -1,0 +1,58 @@
+// Node class representing a node in the binary tree
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int item) {
+        data = item;
+        left = right = null;
+    }
+}
+
+public class BinaryTree {
+    Node root;
+
+    // Method to find the closest common ancestor of two nodes
+    Node closestCommonAncestor(Node node, int value1, int value2) {
+        if (node == null) {
+            return null;
+        }
+
+        // If the current node's value matches either value1 or value2, return the node itself
+        if (node.data == value1 || node.data == value2) {
+            return node;
+        }
+
+        // Recursively search for the values in the left and right subtrees
+        Node leftAncestor = closestCommonAncestor(node.left, value1, value2);
+        Node rightAncestor = closestCommonAncestor(node.right, value1, value2);
+
+        // If both values are found in the left and right subtrees, then the current node is the closest common ancestor
+        if (leftAncestor != null && rightAncestor != null) {
+            return node;
+        }
+
+        // Otherwise, return the non-null ancestor from either left or right subtree
+        return (leftAncestor != null) ? leftAncestor : rightAncestor;
+    }
+
+    public static void main(String[] args) {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new Node(1);
+        tree.root.left = new Node(2);
+        tree.root.right = new Node(3);
+        tree.root.left.left = new Node(4);
+        tree.root.left.right = new Node(5);
+        tree.root.right.left = new Node(6);
+        tree.root.right.right = new Node(7);
+
+        int value1 = 4;
+        int value2 = 5;
+        Node ancestor = tree.closestCommonAncestor(tree.root, value1, value2);
+        if (ancestor != null) {
+            System.out.println("Closest common ancestor of nodes with values " + value1 + " and " + value2 + " is: " + ancestor.data);
+        } else {
+            System.out.println("Nodes with values " + value1 + " and " + value2 + " not found in the tree.");
+        }
+    }
+}
